@@ -1,0 +1,68 @@
+*{
+	box-sizing: border-box;
+	padding: 0px;
+}
+.padre, form {
+	width: 80%;
+	margin: 0px auto;
+}
+
+.circulo {
+	width: 28%;
+	height: 290px;
+	color: white;
+	font-size: 2em;
+	font-family: Arial;
+	border-radius: 50%;
+	float: left;
+	text-align: center;
+	margin: 0px 0px 50px 40px;
+	padding-top: 130px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.7);
+}
+
+.rosado {
+	background-color: rgba(242,58,58,0.8);
+}
+
+.verde {
+	background-color: rgba(68,198,98,0.8);
+}
+
+.rojo {
+	background-color: rgba(201,24,43,0.8);
+}
+
+form {
+	clear: both;
+}
+
+.input {
+	width: 40%;
+	height: 50px;
+	margin-left: 31.5%;
+	border: 2px solid black;
+	font-size: 2em;
+}
+
+.funcion {
+	width: 60%;
+	height: 70px;
+	margin: 15px 0px 0px 20%;
+	border-radius: 10px;
+	background-color: #E3F3AC;
+	color: grey;
+	font-size: 2em;
+}
+.rosado.borde{
+	border: 5px solid #F23A3A;	
+}
+
+.verde.borde{
+	border: 5px solid #44C662;
+}
+
+.rojo.borde{
+	border: 5px solid #C9182B;
+}
+
