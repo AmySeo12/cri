@@ -1,45 +1,41 @@
+var color1 = document.getElementsByClassName("rosado")[0];
+var color2 = document.getElementsByClassName("verde")[0];
+var color3 = document.getElementsByClassName("rojo")[0];
+
+function cambiarColor(color1,color2,color3){
+	color1.classList.toggle("borde");
+	color2.classList.remove("borde");
+	color3.classList.remove("borde");
+}
+
+
 window.addEventListener("load", function() {
 	var superCri = document.getElementById("superCri");
 	superCri.addEventListener("click", function() {
 		var color = document.getElementById("color").value;
 
-		if(color == "rosado"){
-			document.getElementsByClassName("rosado")[0].classList.toggle("borde");
-			document.getElementsByClassName("verde")[0].classList.remove("borde");
-			document.getElementsByClassName("rojo")[0].classList.remove("borde");
-		}
-		else if(color == "verde"){
-			document.getElementsByClassName("verde")[0].classList.toggle("borde");
-			document.getElementsByClassName("rosado")[0].classList.remove("borde");
-			document.getElementsByClassName("rojo")[0].classList.remove("borde");
-		}
-		else if(color == "rojo"){
-			document.getElementsByClassName("rojo")[0].classList.toggle("borde");
-			document.getElementsByClassName("verde")[0].classList.remove("borde");
-			document.getElementsByClassName("rosado")[0].classList.remove("borde");
-		}
+		if(color == "rosado")
+			cambiarColor(color1, color2, color3);
+		else if(color == "verde")
+			cambiarColor(color2, color1, color3);
+		else if(color == "rojo")
+			cambiarColor(color3, color2, color1);
 	});
 
 	var cri = document.getElementById("cri");
 	var conta= 1;
 	cri.addEventListener("click", function() {
         if(conta == 1){
-            document.getElementsByClassName("rosado")[0].classList.toggle("borde");
-            document.getElementsByClassName("verde")[0].classList.remove("borde");
-			document.getElementsByClassName("rojo")[0].classList.remove("borde");
+            cambiarColor(color1, color2, color3);
             document.getElementById("color").placeholder = "Rosado";
         }
         if(conta == 2){
-            document.getElementsByClassName("verde")[0].classList.toggle("borde");
+            cambiarColor(color2, color1, color3);
             document.getElementById("color").placeholder = "Verde";
-            document.getElementsByClassName("rosado")[0].classList.remove("borde");
-			document.getElementsByClassName("rojo")[0].classList.remove("borde");
         }
         if(conta == 3){
-            document.getElementsByClassName("rojo")[0].classList.toggle("borde");
+            cambiarColor(color3, color2, color1);
             document.getElementById("color").placeholder = "Rojo";
-            document.getElementsByClassName("verde")[0].classList.remove("borde");
-			document.getElementsByClassName("rosado")[0].classList.remove("borde");
             conta = 0;
         }
         conta++;
